@@ -1,0 +1,27 @@
+{
+  "name": "prep-challenges",
+  "version": "1.0.0",
+  "description": "## How to Install and Run the Project",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "pull-challenge": "`which bash` ./bin/pull-challenge.sh",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LTUC/prep-challenges.git"
+  },
+  "keywords": [],
+  "author": "Ahmad Swedani && Ayyoub Al-Keyyam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LTUC/prep-challenges/issues"
+  },
+  "homepage": "https://github.com/LTUC/prep-challenges#readme",
+  "dependencies": {
+    "jest": "^27.4.7"
+  }
+}

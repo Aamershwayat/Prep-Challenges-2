@@ -28,7 +28,7 @@ const LastWord = (str) => {
 
     let last = '';
     let lastSpaceIndex = str.lastIndexOf(' ') + 1;
-    last = str.slice(lastSpaceIndex,str.length); 
+    last = str.slice(lastSpaceIndex, str.length);
     return last;
 
 }
@@ -46,8 +46,8 @@ const LastWord = (str) => {
 
 const LastWord_2 = (str) => {
     // write your code here
-    let arrayOfStr = str.split(' '); 
-    return arrayOfStr[arrayOfStr.length-1];
+    let arrayOfStr = str.split(' ');
+    return arrayOfStr[arrayOfStr.length - 1];
 }
 // -------------------------------------------------------------------------------------------------------
 
@@ -71,62 +71,60 @@ const LastWord_2 = (str) => {
 
 const replaceWords = (str) => {
     // write your code here
-    let array =str.split(" ");
+    let array = str.split(" ");
     let I = 'I';
     let am = 'am';
     let was = 'was';
     let indexOfI = array.indexOf(I);
     let indexOfAm = array.indexOf(am);
     let indexOfWas = array.indexOf(was);
-    if(indexOfI != -1){
-        array.splice(indexOfI,1,'We');
+    if (indexOfI != -1) {
+        array.splice(indexOfI, 1, 'We');
     }
-    if(indexOfAm != -1){
-        array.splice(indexOfAm,1,'are');
+    if (indexOfAm != -1) {
+        array.splice(indexOfAm, 1, 'are');
     }
-    if(indexOfWas != -1){
-    array.splice(indexOfWas,1,'were');
+    if (indexOfWas != -1) {
+        array.splice(indexOfWas, 1, 'were');
     }
     return array.join(' ');
-    
-// -------------------------------------------------------------------------------------------------------
 
-// -------------------------------------------------------------------------------------------------------
-// Challenge 04:
-// Optional:
-//
-// Write a function that "joins" the array of words together and puts a comma "," after every five words
-//
-// Input:["move","it","away","from","the","street"] 
-// Output: "move it away from the, street" 
-//
+    // -------------------------------------------------------------------------------------------------------
 
-const arrToStr = (arr) => {
-    // write your code here
-}
-// -------------------------------------------------------------------------------------------------------
+    // -------------------------------------------------------------------------------------------------------
+    // Challenge 04:
+    // Optional:
+    //
+    // Write a function that "joins" the array of words together and puts a comma "," after every five words
+    //
+    // Input:["move","it","away","from","the","street"] 
+    // Output: "move it away from the, street" 
+    //
 
-// -------------------------------------------------------------------------------------------------------
-// Challenge 05:
-// Optional:
-//
-// Simon got a string manipulation question for his interview,
-// it asked him to replace the duplicated letters in a string to an indicator and counter
-// as in the example:
-//
-// Input:"aaaa bbb sdf"
-// Output: "a4 b3 s1d1f1"
-//
-// Input:"door"
-// Output: "d1o2r1"
-//
-// help him by writing the function
-//
+    const arrToStr = (arr) => {
+        // write your code here
+    }
+    // -------------------------------------------------------------------------------------------------------
 
-const letterCounter = (str) => {
-    // write your code here
-}
-// -------------------------------------------------------------------------------------------------------
+    // -------------------------------------------------------------------------------------------------------
+    // Challenge 05:
+    // Optional:
+    //
+    // Simon got a string manipulation question for his interview,
+    // it asked him to replace the duplicated letters in a string to an indicator and counter
+    // as in the example:
+    //
+    // Input:"aaaa bbb sdf"
+    // Output: "a4 b3 s1d1f1"
+    //
+    // Input:"door"
+    // Output: "d1o2r1"
+    //
+    // help him by writing the function
+    //
 
-
-module.exports = { LastWord, LastWord_2, replaceWords, arrToStr, letterCounter };
+    const letterCounter = (str) => {
+        // write your code here
+    }
+    // -------------------------------------------------------------------------------------------------------
+    module.exports = { LastWord, LastWord_2, replaceWords, arrToStr, letterCounter };

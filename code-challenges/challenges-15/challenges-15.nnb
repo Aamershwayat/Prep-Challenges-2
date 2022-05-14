@@ -24,7 +24,7 @@
         {
             "language": "javascript",
             "source": [
-                "'use strict';\n\nconst fs = require('fs');\n\nprocess.stdin.resume();\nprocess.stdin.setEncoding('utf-8');\n\nlet inputString = '';\nlet currentLine = 0;\n\nprocess.stdin.on('data', function(inputStdin) {\n    inputString += inputStdin;\n});\n\nprocess.stdin.on('end', function() {\n    inputString = inputString.split('\\n');\n\n    main();\n});\n\nfunction readLine() {\n    return inputString[currentLine++];\n}\n\n/*\n * Complete the 'equalizeArray' function below.\n *\n * The function is expected to return an INTEGER.\n * The function accepts INTEGER_ARRAY arr as parameter.\n */\n\nfunction equalizeArray(arr) {\n    // Write your code here\n    console.log(arr)\n    let b = {};\n    let max = '', maxi = 0;\n    for (let k of arr) {\n        if (b[k]) b[k]++; else b[k] = 1;\n        if (maxi < b[k]) { max = k; maxi = b[k] }\n    }\n    return arr.length - maxi;\n}\n\nfunction main() {\n    const ws = fs.createWriteStream(process.env.OUTPUT_PATH);\n\n    const n = parseInt(readLine().trim(), 10);\n\n    const arr = readLine().replace(/\\s+$/g, '').split(' ').map(arrTemp => parseInt(arrTemp, 10));\n\n    const result = equalizeArray(arr);\n\n    ws.write(result + '\\n');\n\n    ws.end();\n}\n"
+                "function equalizeArray(arr) {\n    // Write your code here\n    var countObj = {};\n    arr.forEach((ele) => {\n        if (countObj[ele]) {\n            countObj[ele] = countObj[ele] + 1;\n        } else {\n            countObj[ele] = 1;\n        }\n    });\n    var mostRepetedNumber = 0;\n    var compair = 0;\n    for (let ele in countObj) {\n        if (compair < countObj[ele]) {\n            compair = countObj[ele];\n            mostRepetedNumber = ele;\n        }\n    }\n    console.log(arr.length - countObj[mostRepetedNumber])\n    return arr.length - countObj[mostRepetedNumber];\n}"
             ],
             "outputs": []
         },
@@ -45,7 +45,7 @@
         {
             "language": "javascript",
             "source": [
-                "'use strict';\n\nconst fs = require('fs');\n\nprocess.stdin.resume();\nprocess.stdin.setEncoding('utf-8');\n\nlet inputString = '';\nlet currentLine = 0;\n\nprocess.stdin.on('data', function(inputStdin) {\n    inputString += inputStdin;\n});\n\nprocess.stdin.on('end', function() {\n    inputString = inputString.split('\\n');\n\n    main();\n});\n\nfunction readLine() {\n    return inputString[currentLine++];\n}\n\n/*\n * Complete the 'howManyGames' function below.\n *\n * The function is expected to return an INTEGER.\n * The function accepts following parameters:\n *  1. INTEGER p\n *  2. INTEGER d\n *  3. INTEGER m\n *  4. INTEGER s\n */\n\nfunction howManyGames(p, d, m, s) {\n    // Return the number of games you can buy\n\n}\n\nfunction main() {\n    const ws = fs.createWriteStream(process.env.OUTPUT_PATH);\n\n    const firstMultipleInput = readLine().replace(/\\s+$/g, '').split(' ');\n\n    const p = parseInt(firstMultipleInput[0], 10);\n\n    const d = parseInt(firstMultipleInput[1], 10);\n\n    const m = parseInt(firstMultipleInput[2], 10);\n\n    const s = parseInt(firstMultipleInput[3], 10);\n\n    const answer = howManyGames(p, d, m, s);\n\n    ws.write(answer + '\\n');\n\n    ws.end();\n}\n"
+                ""
             ],
             "outputs": []
         },
@@ -59,7 +59,7 @@
         {
             "language": "javascript",
             "source": [
-                "'use strict';\n\nconst fs = require('fs');\n\nprocess.stdin.resume();\nprocess.stdin.setEncoding('utf-8');\n\nlet inputString = '';\nlet currentLine = 0;\n\nprocess.stdin.on('data', function(inputStdin) {\n    inputString += inputStdin;\n});\n\nprocess.stdin.on('end', function() {\n    inputString = inputString.split('\\n');\n\n    main();\n});\n\nfunction readLine() {\n    return inputString[currentLine++];\n}\n\n/*\n * Complete the 'squares' function below.\n *\n * The function is expected to return an INTEGER.\n * The function accepts following parameters:\n *  1. INTEGER a\n *  2. INTEGER b\n */\n\nfunction squares(a, b) {\n    // Write your code here\n\n}\n\nfunction main() {\n    const ws = fs.createWriteStream(process.env.OUTPUT_PATH);\n\n    const q = parseInt(readLine().trim(), 10);\n\n    for (let qItr = 0; qItr < q; qItr++) {\n        const firstMultipleInput = readLine().replace(/\\s+$/g, '').split(' ');\n\n        const a = parseInt(firstMultipleInput[0], 10);\n\n        const b = parseInt(firstMultipleInput[1], 10);\n\n        const result = squares(a, b);\n\n        ws.write(result + '\\n');\n    }\n\n    ws.end();\n}\n"
+                ""
             ],
             "outputs": []
         }

@@ -24,7 +24,7 @@
         {
             "language": "javascript",
             "source": [
-                "var countObj = {};\ncandles.forEach((ele) => {\n    if (countObj[ele]) {\n        countObj[ele] = countObj[ele] + 1;\n    } else {\n        countObj[ele] = 1;\n    }\n});\nvar mostRepetedNumber = 0;\nvar compair = 0;\nfor (let ele in countObj) {\n    if (compair < countObj[ele]) {\n        compair = countObj[ele];\n        mostRepetedNumber = ele;\n    }\n}\nconsole.log(countObj[mostRepetedNumber])\nreturn  countObj[mostRepetedNumber];\n}"
+                "var countObj = {};\ncandles.forEach((ele) => {\n    if (countObj[ele]) {\n        countObj[ele] = countObj[ele] + 1;\n    } else {\n        countObj[ele] = 1;\n    }\n    \n});\nvar mostRepetedNumber = 0;\nvar compair = 0;\nfor (let ele in countObj) {\n    if (compair < countObj[ele]) {\n        compair = countObj[ele];\n        mostRepetedNumber = ele;\n    }\n}\nconsole.log(countObj[mostRepetedNumber])\nreturn  countObj[mostRepetedNumber];\n}"
             ],
             "outputs": []
         },
